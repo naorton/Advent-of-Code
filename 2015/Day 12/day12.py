@@ -17,6 +17,9 @@ def arrayChecker(array, count):
 
 def typeChecker(data, count):
 	if type(data) == dict:
+		for value in data.values():
+			if value == "red":
+				return count
 		for entry in data:
 			if type(entry) == str:
 				temp = data[entry]
